@@ -1,11 +1,11 @@
-$(document).ready(function() { 
+$(document).ready(function () {
     $('.responsive').slick({
-    // dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    responsive: [{
+        // dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [{
             breakpoint: 1024,
             settings: {
                 slidesToShow: 1,
@@ -35,15 +35,15 @@ $(document).ready(function() {
                 slidesToScroll: 1
             }
         }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-    ]
-});
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
 
-// aos Animation
+    // aos Animation
 
-AOS.init();
+    AOS.init();
 
 
 });
@@ -59,28 +59,28 @@ bar.addEventListener("click", () => {
     navbar.classList.toggle('active');
 });
 
-navbarli.forEach(element => {
-    element.addEventListener("click", () => {
-        navbar.classList.toggle('active');
-        icon.classList.replace("fa-times", "fa-bars");
-    });
-});
+// navbarli.forEach(element => {
+//     element.addEventListener("click", () => {
+//         navbar.classList.toggle('active');
+//         icon.classList.replace("fa-times", "fa-bars");
+//     });
+// });
 
 let btn = document.querySelector(".bar");
 let icon = btn.querySelector(".fa-bars");
-btn.onclick = function() {
-        if (icon.classList.contains("fa-bars")) {
-            icon.classList.replace("fa-bars", "fa-times");
-        } else {
-            icon.classList.replace("fa-times", "fa-bars");
-        }
+btn.onclick = function () {
+    if (icon.classList.contains("fa-bars")) {
+        icon.classList.replace("fa-bars", "fa-times");
+    } else {
+        icon.classList.replace("fa-times", "fa-bars");
     }
-    // hamburger button end
+}
+// hamburger button end
 
 
-    //  removeClass and addclass in on Scrolled
+//  removeClass and addclass in on Scrolled
 
-$(window).scroll(function() {
+$(window).scroll(function () {
     // console.log("test");
     let TopScrolled = $(window).scrollTop();
     // console.log(TopScrolled);
