@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <style>
+
+    </style>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .container {
+            max-width: 300px;
+            background: #ccc;
+            padding: 20px;
+        }
+        
+        .g-recaptcha {
+            transform-origin: left top;
+            -webkit-transform-origin: left top;
+        }
+        
+        .forme_color {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        .forme_color input,
+        .forme_color select,
+        .forme_color textarea {
+            width: 100%;
+            background-color: #F6F6F6;
+            border-color: #C6BABA;
+            border: 1px solid #818a91;
+            padding: 13px 15px;
+            border-radius: 3px;
+            margin-bottom: 15px;
+            transition: all .3s;
+            display: block;
+            outline: none;
+        }
+        
+        .forme_color button {
+            background-color: #0071bc;
+            font-size: 18px;
+            width: 100%;
+            margin: 15px 0;
+            padding: 13px 15px;
+            border-radius: 3px;
+            border: none;
+            color: #fff;
+        }
+        
+        .forme_color button:hover {
+            background-color: #fa4b64;
+        }
+        
+        .rc-anchor-light {
+            background: #999 !important;
+            color: #000 !important;
+        }
+        
+        .cptch_block {
+            color: #FFFFFF;
+        }
+        
+        .rc-anchor-invisible-text {
+            background-color: #0071bc;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="forme_color" action="#" method="post">
+        <input type="text" placeholder="Name">
+        <input type="tel" placeholder="Mobile number">
+        <select name="course" id="">
+            <option value="Online Course">Online Course</option>
+            <option value="Online Course">Offline Admission</option>
+        </select>
+        <select name="course" id=""> 
+            <option value="General Class 3">General Class 3</option>
+            <option value="TET / TAT">TET / TAT</option>
+            <option value="GPSC Class 1/2">GPSC Class 1/2</option>
+            <option value="Forest Guard">Forest Guard</option>
+            <option value="Talati &amp; Jr. Clerk">Talati &amp; Jr. Clerk</option>
+            <option value="GPSC Mains">GPSC Mains</option>
+            <option value="Other">Other</option>
+        </select>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+
+        <div class="g-recaptcha" data-theme="light" data-sitekey="XXXXXXXXXXXXX" style="transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+
+
+
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+    </script>
+    <script type="text/javascript">
+        var onloadCallback = function() {
+            // alert("grecaptcha is ready!");
+            document.querySelector('.rc-anchor-error-msg').style.background = "#000";
+        };
+    </script>
+</body>
+
+</html>
